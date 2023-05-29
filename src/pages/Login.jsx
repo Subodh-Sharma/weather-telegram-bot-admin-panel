@@ -24,7 +24,7 @@ const Login = () => {
         dispatch(adminlogin({ formData, navigate, toast }))
     }
     };
-    console.log(JSON.parse(localStorage.getItem("profile")))
+    // console.log(JSON.parse(localStorage.getItem("profile")))
 
   return (
     <Box display="flex" flexDir="column" w="100%" margin="auto">
@@ -37,7 +37,7 @@ const Login = () => {
         <Input
           value={loginId}
           type="text"
-          placeholder="Enter Your Email Address"
+          placeholder="Enter Your Login Id"
           onChange={(e) => setLoginId(e.target.value)}
         />
       </FormControl>

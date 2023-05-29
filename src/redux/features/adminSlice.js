@@ -11,7 +11,7 @@ export const adminlogin = createAsyncThunk("admin/login",async({formData,navigat
             isClosable: true,
             position: "top"
         });
-        navigate('/');
+        navigate('/home');
         return response.data;
     }catch(err){
         toast({

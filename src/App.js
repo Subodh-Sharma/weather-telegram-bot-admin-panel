@@ -14,9 +14,8 @@ const App = () => {
     <div className='App'>
     <BrowserRouter>
     <Routes>
-
-      {JSON.parse(localStorage.getItem("profile")) ? 
-      <Route path="/" element={<Home/>}/>:<Route path="/" element={<Login/>}/> }
+      <Route path="/" element={<Login/>}/>
+      <Route path="/home" element={<Home/>}/>
       <Route path="/users" element={<Users/>}/>
       <Route path="/settings" element={<Settings/>}/>
     </Routes>

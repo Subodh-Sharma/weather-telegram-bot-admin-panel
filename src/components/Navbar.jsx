@@ -1,7 +1,16 @@
 import React from 'react'
-import { Box,Text } from "@chakra-ui/react";
+import { Box,Button,Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = ()=>{
+    localStorage.removeItem("profile");
+    navigate("/")
+  }
+  
   return (
     <Box
     display="flex"
@@ -11,9 +20,9 @@ const Navbar = () => {
     bg="#068DA9"
     color= "gold"
     w="100%"
-    h="10%"
     >
-      <Text marginTop="0.5%" marginBottom="3.5%" fontSize="1.5rem">Know Weather - Admin Panel</Text>
+      <Text marginTop="0.5%" marginBottom="1.5%" fontSize="1.5rem">Know Weather - Admin Panel</Text>
+      <Button marginLeft="50%" marginBottom="0.5%" color="black" onClick={handleLogout}>Logout</Button>
     </Box>
   )
 }
